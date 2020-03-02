@@ -1,0 +1,120 @@
+input,button,a{
+  outline: none;
+  text-decoration: none;
+}
+button,a{
+  cursor: pointer;
+}
+
+.color-sample {
+    width: 60px;
+    height: 40px;
+    border-radius: .4rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+body{
+  display: table;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+  height:300px;
+  margin-top: 100px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.input{
+&-color{
+border-radius: 10px;
+border: solid 2px #c3c3c3;
+width:10rem;
+padding:0.5rem;
+font-size: 1.5rem;
+}
+&-addBtn{
+  font-size: 1.5rem;
+  padding:0.5rem 1rem;
+  border-radius: 10px;
+  margin-left: 5px;
+  &:hover{
+    background: rgba(204, 204, 204,0.2);
+  }
+}
+}
+.new-color{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rgbvalue{
+  padding-left:20px;
+}
+table{
+  margin: 50px auto;
+  border-collapse: collapse;
+}
+th,td {
+    border-bottom: 1px solid #ccc;
+    line-height: 2.5;
+    font-weight: 300;
+}
+th{
+  font-size: 15px;
+}
+
+.copy-value {
+  cursor: pointer;
+  position: relative;
+  &:hover{
+    font-size: 1.54rem;
+    transition: all  0.3s ease;
+    background-color: rgba(204, 204, 204,0.2);
+  }
+  &:active{
+    font-size: 1.5rem;
+  }
+}
+
+/* Tooltip */
+.tooltip::after {
+    content: 'コピーしたよ！';
+    background: #555;
+    display: inline-block;
+    color: #fff;
+    width:90px;
+    border-radius: .4rem;
+    position: absolute;
+    left: 50%;
+    bottom: -1rem;
+    transform: translate(-50%, 0);
+    font-size: .75rem;
+    padding: 2px;
+    animation: fade-tooltip .5s 1s 1 forwards;
+}
+
+/* Animation */
+@keyframes fade-tooltip {
+  to { opacity: 0; }
+}
+
+td{
+  &:hover{
+    line-height: 2.4;
+}
+}
+/* シェイク */
+.error {
+	animation: shake .6s ease-out both;
+}
+@keyframes shake {
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-6px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(6px, 0, 0);
+  }
+}

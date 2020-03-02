@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
+  <title>RGB値に変換できるよ！
+  </title>
+</head>
+<body>
+  <section class="container" id="app">
+    <span class="hash">#</span>
+    <input class="input-color" v-bind:class="{ error: invalidColor }" v-model="newColor" type="text" placeholder="00bbdd" @keyup.enter="addColor" @keyup="removeClass" autofocus>
+    <button class="input-addBtn" v-on:click="addItem()">add</button>
+    <div class="new-color" v-if="newColor != ''">
+      <div class="color-sample" :style="{background: '#' + newColor}"></div>
+      <div class="rgbvalue">
+        <p>rgb({{rgbValue}})</p>
+      </div>
+    </div>
+    <table class="table">
+      <tr>
+        <th width="100px">Color</th>
+        <th width="120px">Hex Code</th>
+        <th width="300px">RGB</th>
+      </tr>
+      <tr>
+        <td>
+          <div class="color-sample" :style="{background: '#cac'}"></div>
+        </td>
+        <td><span class="hash">#</span>cac</td>
+        <td>rgb(204, 170, 204)</td>
+      </tr>
+      <tr v-for="(addedColor,index) in addedColors">
+        <td>
+          <div class="color-sample" :style="{background:addedColor.hex}"></div>
+        </td>
+        <td class="copy-value" :data-clipboard-text="addedColor.hex">{{addedColor.hex}}</td>
+        <td class="copy-value" :data-clipboard-text="addedColor.rgb">{{addedColor.rgb}}</td>
+      </tr>
+    </table>
+
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="app.js"></script>
+</body>
+</html>

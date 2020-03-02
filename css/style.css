@@ -1,0 +1,168 @@
+@charset "UTF-8";
+input, button, a {
+  outline: none;
+  text-decoration: none;
+}
+
+button, a {
+  cursor: pointer;
+}
+
+.color-sample {
+  width: 60px;
+  height: 40px;
+  border-radius: .4rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+body {
+  display: table;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  height: 300px;
+  margin-top: 100px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.input-color {
+  border-radius: 10px;
+  border: solid 2px #c3c3c3;
+  width: 10rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.input-addBtn {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+
+.input-addBtn:hover {
+  background: rgba(204, 204, 204, 0.2);
+}
+
+.new-color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.rgbvalue {
+  padding-left: 20px;
+}
+
+table {
+  margin: 50px auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  border-bottom: 1px solid #ccc;
+  line-height: 2.5;
+  font-weight: 300;
+}
+
+th {
+  font-size: 15px;
+}
+
+.copy-value {
+  cursor: pointer;
+  position: relative;
+}
+
+.copy-value:hover {
+  font-size: 1.54rem;
+  -webkit-transition: all  0.3s ease;
+  transition: all  0.3s ease;
+  background-color: rgba(204, 204, 204, 0.2);
+}
+
+.copy-value:active {
+  font-size: 1.5rem;
+}
+
+/* Tooltip */
+.tooltip::after {
+  content: 'コピーしたよ！';
+  background: #555;
+  display: inline-block;
+  color: #fff;
+  width: 90px;
+  border-radius: .4rem;
+  position: absolute;
+  left: 50%;
+  bottom: -1rem;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  font-size: .75rem;
+  padding: 2px;
+  -webkit-animation: fade-tooltip .5s 1s 1 forwards;
+          animation: fade-tooltip .5s 1s 1 forwards;
+}
+
+/* Animation */
+@-webkit-keyframes fade-tooltip {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fade-tooltip {
+  to {
+    opacity: 0;
+  }
+}
+
+td:hover {
+  line-height: 2.4;
+}
+
+/* シェイク */
+.error {
+  -webkit-animation: shake .6s ease-out both;
+          animation: shake .6s ease-out both;
+}
+
+@-webkit-keyframes shake {
+  20%, 80% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    -webkit-transform: translate3d(-6px, 0, 0);
+            transform: translate3d(-6px, 0, 0);
+  }
+  40%, 60% {
+    -webkit-transform: translate3d(6px, 0, 0);
+            transform: translate3d(6px, 0, 0);
+  }
+}
+
+@keyframes shake {
+  20%, 80% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    -webkit-transform: translate3d(-6px, 0, 0);
+            transform: translate3d(-6px, 0, 0);
+  }
+  40%, 60% {
+    -webkit-transform: translate3d(6px, 0, 0);
+            transform: translate3d(6px, 0, 0);
+  }
+}
+/*# sourceMappingURL=style.css.map */
