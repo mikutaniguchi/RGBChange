@@ -10,6 +10,7 @@
 </head>
 <body>
   <section class="container" id="app">
+    <h1 class="title">RGB値に変換できるよ！</h1>
     <span class="hash">#</span>
     <input class="input-color" v-bind:class="{ error: invalidColor }" v-model="newColor" type="text" placeholder="00bbdd" @keyup.enter="addColor" @keyup="removeClass" autofocus>
     <button class="input-addBtn" v-on:click="addItem()">add</button>
